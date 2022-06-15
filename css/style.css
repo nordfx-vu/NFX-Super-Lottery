@@ -66,6 +66,28 @@ html, body {
   box-sizing: border-box ;
   outline: none ; }
 
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar:horizontal {
+  height: 5px; }
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-color: #f9b401;
+  background-color: #f9b401; }
+
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #f9b401;
+  background-color: #f9b401; }
+
+::-webkit-scrollbar-track {
+  border-width: 0; }
+
+::-webkit-scrollbar-track-piece {
+  background: #6239f3; }
+
 body {
   font: 24px/30px  'Mont', sans-serif;
   font-weight: normal;
@@ -119,7 +141,8 @@ b, strong {
 .stream-block {
   width: 100%;
   height: 100%;
-  max-height: 100vh;
+  /*max-height: 100vh;*/
+  max-height: 94vh;
   background: url(../images/bg.jpg) 50% 0 no-repeat;
   background-size: cover;
   display: flex;
@@ -181,6 +204,7 @@ b, strong {
 }
 .container {
   width: 1580px;
+  height: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -207,6 +231,7 @@ b, strong {
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;
+  height: 100%;
 }
 .stream-userlist {
   width: 820px;
@@ -224,6 +249,8 @@ b, strong {
 .stream-block-row.visible .stream-userlist {
   opacity: 1;
   visibility: visible;
+  height: 100%;
+  overflow: auto;
 }
 .stream-userlist__head, .stream-winner {
   display: flex;
@@ -249,23 +276,29 @@ b, strong {
 .stream-userlist__body .stream-col:nth-child(3) {
   font-weight: 900;
 }
-.win-1, .win-2 {
+.win-0, .win-1, .win-2, .win-3 {
   background: rgba(115,52,1,0.7);
 }
-.win-1 .stream-col:nth-child(2), .win-2 .stream-col:nth-child(2) {
+.win-0 .stream-col:nth-child(2), .win-1 .stream-col:nth-child(2),
+.win-2 .stream-col:nth-child(2), .win-3 .stream-col:nth-child(2){
   color: #ff8d30;
 }
-.win-3,.win-4,.win-5,.win-6,.win-7 {
+.win-4,.win-5,.win-6,.win-7,.win-8,
+.win-9,.win-10,.win-11,.win-12,.win-13 {
   background: rgba(197,111,92,0.5);
 }
-.win-3 .stream-col:nth-child(2),.win-4 .stream-col:nth-child(2),.win-5 .stream-col:nth-child(2),.win-6 .stream-col:nth-child(2),.win-7 .stream-col:nth-child(2) {
+.win-4 .stream-col:nth-child(2),.win-5 .stream-col:nth-child(2),.win-6 .stream-col:nth-child(2),
+.win-7 .stream-col:nth-child(2), .win-8 .stream-col:nth-child(2), .win-9 .stream-col:nth-child(2),
+.win-10 .stream-col:nth-child(2), .win-11 .stream-col:nth-child(2), .win-12 .stream-col:nth-child(2),
+.win-13 .stream-col:nth-child(2) {
   color: #fcff15;
 }
-.win-2, .win-7 {
+.win-3, .win-13 {
   border-bottom: 1px solid rgba(255,255,255,0.41);
 }
 .stream-randomizer {
   width: 665px;
+  height: 100%;
   position: relative;
   max-width: calc(45% - 30px);
   border-radius: 10px;
@@ -334,6 +367,7 @@ b, strong {
 }
 .stream-container {
   width: 100%;
+  height: 100%;
 }
 .btn {
   width: 370px;
