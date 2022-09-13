@@ -1,6 +1,6 @@
 const WINNERS_OF = 54;
 const SLOTS_PER_REEL = 10;
-// const MAX_SLOTS = `${Object.keys(TIKETS).length}`;
+// const MAX_SLOTS = `${Object.keys(TICKETS).length}`;
 const MIN_SLOTS = '27443';
 const MAX_SLOTS = '44168';
 const REEL_RADIUS = 123;
@@ -43,7 +43,12 @@ function getRndInteger(min, max) {
 }
 
 function spin(timer) {
-    let randomNumb = `${getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS))}`;
+    let rndInteger = getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS));
+    if(isNulled(rndInteger)) {
+        spin(2);
+    }
+
+    let randomNumb = `${rndInteger}`;
 	let currNumber = randomNumb.padStart(MAX_SLOTS.length, "0");
   for(let i = 1; i < (currNumber.length+1); i ++) {
     let oldSeed = 0;
@@ -70,6 +75,15 @@ function spin(timer) {
   console.log('=====');
 }
 
+function isNulled(rndInteger) {
+    for(let key in TICKETS_NULLED){
+        if (key === rndInteger) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function generateSpin(id) {
   return `<div id="ring${id}" class="ring"></div>`
 }
@@ -84,9 +98,9 @@ function generateWinner(id, prize, ticket, account) {
 }
 
 function gettingWinnerAccount (id) {
-  for (let key in TIKETS) {
+  for (let key in TICKETS) {
     if (key == parseInt(id)) {
-      return TIKETS[key]
+      return TICKETS[key]
     }
   }
 }
@@ -153,7 +167,8 @@ let counterWinner = 0;
         winnerObj.winnerAccount = gettingWinnerAccount(winNumber.join(''));
         listWinner.push(winnerObj);
         window.localStorage.setItem('listWinner',JSON.stringify(listWinner));
-        $('.stream-userlist__body').prepend(generateWinner(counterWinner, winPrizes[counterWinner], winNumber.join(''), gettingWinnerAccount(winNumber.join(''))));
+        $('.stream-userlist__body').prepend(generateWinner(counterWinner, winPrizes[counterWinner], winNumber.join(''),
+            gettingWinnerAccount(winNumber.join(''))));
       }, 4000);
       spin(2);
     }

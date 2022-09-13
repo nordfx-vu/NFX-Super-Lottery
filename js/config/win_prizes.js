@@ -5,7 +5,7 @@ for(let i = 0; i < Object.keys(confPrizes).length; i++) {
     createWinPrizeList(Object.keys(confPrizes)[i - 1], Object.keys(confPrizes)[i], Object.values(confPrizes)[i]);
 }
 
-console.log(winPrizes);
+// console.log(winPrizes);
 
 function createWinPrizeList (from, to, value) {
     from = from === undefined? 0 : parseInt(from);
