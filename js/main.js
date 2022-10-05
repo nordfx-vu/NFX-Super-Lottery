@@ -2,7 +2,7 @@ const WINNERS_OF = 54;
 const SLOTS_PER_REEL = 10;
 // const MAX_SLOTS = `${Object.keys(TICKETS).length}`;
 const MIN_SLOTS = '27443';
-const MAX_SLOTS = '44168';
+const MAX_SLOTS = '46711';
 const REEL_RADIUS = 123;
 
 let winNumber = [];
@@ -45,6 +45,7 @@ function getRndInteger(min, max) {
 function spin(timer) {
     let rndInteger = getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS));
     if(isNulled(rndInteger)) {
+        // console.log("-------Nulled------")
         spin(2);
     }
 
@@ -72,7 +73,7 @@ function spin(timer) {
 	    winNumber.push(seed);
     }, 100)
   }
-  console.log('=====');
+  // console.log('=====');
 }
 
 function isNulled(rndInteger) {
