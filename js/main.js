@@ -1,4 +1,4 @@
-const WINNERS_OF = 54;
+const WINNERS_OF = 94;
 const SLOTS_PER_REEL = 10;
 // const MAX_SLOTS = `${Object.keys(TICKETS).length}`;
 const MIN_SLOTS = '27443';
