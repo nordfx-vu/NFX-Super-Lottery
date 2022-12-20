@@ -45,7 +45,7 @@ function getRndInteger(min, max) {
 function spin(timer) {
     let rndInteger = getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS));
     if(isNulled(rndInteger)) {
-        console.log("-------Nulled------")
+        console.log("-------Nulled------");
         spin(2);
     }
 
