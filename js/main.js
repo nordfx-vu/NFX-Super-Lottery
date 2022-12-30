@@ -90,12 +90,30 @@ function generateSpin(id) {
 }
 
 function generateWinner(id, prize, ticket, account) {
+
   return  `<div class="stream-winner win-${WINNERS_OF-id}">`+
                   `<div class="stream-col">${id}</div>`+
-                  `<div class="stream-col">$ ${prize}</div>`+
+                  `<div class="stream-col ` + getColor(id) + `">$ ${prize}</div>`+
                   `<div class="stream-col">${ticket}</div>`+
                   `<div class="stream-col">${account}</div>`+
             `</div>`;
+}
+
+function getColor(id) {
+    var color;
+    if (id < 61) {
+        color = "turquoise-color";
+    }
+    if (id > 60 && id < 81) {
+        color = "blue-color";
+    }
+    if (id > 80 && id < 93) {
+        color = "yellow-color";
+    }
+    if (id > 92) {
+        color = "orange-color";
+    }
+    return color;
 }
 
 function gettingWinnerAccount (id) {

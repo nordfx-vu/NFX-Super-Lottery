@@ -270,30 +270,49 @@ b, strong {
   text-align: center;
 }
 .stream-userlist__body .stream-col:nth-child(2) {
-  color:#20edff;
+  /*color:#20edff;*/
   font-weight: 900;
 }
 .stream-userlist__body .stream-col:nth-child(3) {
   font-weight: 900;
 }
-.win-0, .win-1, .win-2, .win-3 {
-  background: rgba(115,52,1,0.7);
+.turquoise-color {
+  color:#20edff;
 }
-.win-0 .stream-col:nth-child(2), .win-1 .stream-col:nth-child(2),
-.win-2 .stream-col:nth-child(2), .win-3 .stream-col:nth-child(2){
+.blue-color {
+  /*color:#0000FF;*/
+  color: #0093CDFF;
+}
+.orange-color {
   color: #ff8d30;
 }
-.win-4,.win-5,.win-6,.win-7,.win-8,
+.yellow-color {
+  color: #fcff15;
+}
+
+.win-0, .win-1 {
+  background: rgba(115,52,1,0.7);
+}
+/*.win-0 .stream-col:nth-child(2), .win-1 .stream-col:nth-child(2),*/
+/*.win-2 .stream-col:nth-child(2), .win-3 .stream-col:nth-child(2){*/
+/*  color: #ff8d30;*/
+/*}*/
+.win-2, .win-3, .win-4,.win-5,.win-6,.win-7,.win-8,
 .win-9,.win-10,.win-11,.win-12,.win-13 {
   background: rgba(197,111,92,0.5);
 }
-.win-4 .stream-col:nth-child(2),.win-5 .stream-col:nth-child(2),.win-6 .stream-col:nth-child(2),
-.win-7 .stream-col:nth-child(2), .win-8 .stream-col:nth-child(2), .win-9 .stream-col:nth-child(2),
-.win-10 .stream-col:nth-child(2), .win-11 .stream-col:nth-child(2), .win-12 .stream-col:nth-child(2),
-.win-13 .stream-col:nth-child(2) {
-  color: #fcff15;
+.win-14, .win-15, .win-16,.win-17,.win-18,.win-19,.win-20,
+.win-21,.win-22,.win-23,.win-24,.win-25,.win-26,.win-27,.win-28,.win-29,.win-30,.win-31,.win-32,.win-33 {
+  background: rgba(197,160,92,0.5);
 }
-.win-3, .win-13 {
+/*.win-4 .stream-col:nth-child(2),.win-5 .stream-col:nth-child(2),.win-6 .stream-col:nth-child(2),*/
+/*.win-7 .stream-col:nth-child(2), .win-8 .stream-col:nth-child(2), .win-9 .stream-col:nth-child(2),*/
+/*.win-10 .stream-col:nth-child(2), .win-11 .stream-col:nth-child(2), .win-12 .stream-col:nth-child(2),*/
+/*.win-13 .stream-col:nth-child(2) {*/
+/*  color: #fcff15;*/
+/*}*/
+/*.win-3, .win-13 {*/
+.win-1, .win-13, .win-33 {
   border-bottom: 1px solid rgba(255,255,255,0.41);
 }
 .stream-randomizer {
