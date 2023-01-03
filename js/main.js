@@ -106,14 +106,14 @@ function getColor(id) {
         color = "turquoise-color";
     }
     if (id > 60 && id < 81) {
-        color = "blue-color";
-    }
-    if (id > 80 && id < 93) {
         color = "yellow-color";
     }
-    if (id > 92) {
+    if (id > 80 && id < 93) {
         color = "orange-color";
     }
+    // if (id > 92) {
+    //     color = "orange-color";
+    // }
     return color;
 }
 
