@@ -1,4 +1,5 @@
-const confPrizes = {60: 250, 80: 500, 92: 1250, 94: 10000};
+// const confPrizes = {60: 250, 80: 500, 92: 1250, 94: 10000};
+const confPrizes = {40: 250, 60: 500, 65: 1000};
 let winPrizes = {};
 
 for(let i = 0; i < Object.keys(confPrizes).length; i++) {

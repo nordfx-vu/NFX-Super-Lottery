@@ -1,8 +1,8 @@
-const WINNERS_OF = 94;
+const WINNERS_OF = 65;
 const SLOTS_PER_REEL = 10;
 // const MAX_SLOTS = `${Object.keys(TICKETS).length}`;
-const MIN_SLOTS = '27443';
-const MAX_SLOTS = '54163';
+const MIN_SLOTS = '61016';
+const MAX_SLOTS = '73322';
 const REEL_RADIUS = 123;
 
 let winNumber = [];
@@ -102,18 +102,18 @@ function generateWinner(id, prize, ticket, account) {
 
 function getColor(id) {
     var color;
-    if (id < 61) {
+    if (id < 41) {
         color = "turquoise-color";
     }
-    if (id > 60 && id < 81) {
+    if (id > 40 && id < 61) {
         color = "yellow-color";
     }
-    if (id > 80 && id < 93) {
-        color = "orange-color";
-    }
-    // if (id > 92) {
+    // if (id > 80 && id < 93) {
     //     color = "orange-color";
     // }
+    if (id > 60) {
+        color = "orange-color";
+    }
     return color;
 }
 
