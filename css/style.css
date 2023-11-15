@@ -542,7 +542,7 @@ b, strong {
 .ring {
   margin: 0;
   height: 80px;
-  width: 90px;
+  width: 80px;
   float: left;
   transform-style: preserve-3d;
   position: relative;
@@ -550,7 +550,7 @@ b, strong {
 }
 .slot {
   position: absolute;
-  width: 90px;
+  width: 80px;
   height: 80px;
   box-sizing: border-box;
   opacity: 0.9;
