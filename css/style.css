@@ -3,37 +3,37 @@
   font-family: 'Mont';
   src: url("fonts/Mont-Heavy.eot");
   src: url("fonts/Mont-Heavy.eot") format("embedded-opentype"),
-  url("fonts/Mont-Heavy.woff") format("woff"),
-  url("fonts/Mont-Heavy.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 900;
+       url("fonts/Mont-Heavy.woff") format("woff"),
+       url("fonts/Mont-Heavy.ttf") format("truetype");
+ font-style: normal;
+ font-weight: 900;
 }
 @font-face {
   font-family: 'Mont';
   src: url("fonts/Mont-Regular.eot");
   src: url("fonts/Mont-Regular.eot") format("embedded-opentype"),
-  url("fonts/Mont-Regular.woff") format("woff"),
-  url("fonts/Mont-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+       url("fonts/Mont-Regular.woff") format("woff"),
+       url("fonts/Mont-Regular.ttf") format("truetype");
+ font-style: normal;
+ font-weight: normal;
 }
 @font-face {
   font-family: 'Mont';
   src: url("fonts/Mont-Bold.eot");
   src: url("fonts/Mont-Bold.eot") format("embedded-opentype"),
-  url("fonts/Mont-Bold.woff") format("woff"),
-  url("fonts/Mont-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: bold;
+       url("fonts/Mont-Bold.woff") format("woff"),
+       url("fonts/Mont-Bold.ttf") format("truetype");
+ font-style: normal;
+ font-weight: bold;
 }
 @font-face {
   font-family: 'Mont';
   src: url("fonts/Mont-Semibold.eot");
   src: url("fonts/Mont-Semibold.eot") format("embedded-opentype"),
-  url("fonts/Mont-Semibold.woff") format("woff"),
-  url("fonts/Mont-Semibold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 500;
+       url("fonts/Mont-Semibold.woff") format("woff"),
+       url("fonts/Mont-Semibold.ttf") format("truetype");
+ font-style: normal;
+ font-weight: 500;
 }
 
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
@@ -132,7 +132,7 @@ b, strong {
   border-width: 0; }
 
 ::-webkit-scrollbar-track-piece {
-  background: linear-gradient(to bottom, rgba(154,54,140,1) 0%,rgba(80,98,229,1) 100%); }
+      background: linear-gradient(to bottom, rgba(154,54,140,1) 0%,rgba(80,98,229,1) 100%); }
 
 .stream-block {
   width: 100%;
@@ -324,25 +324,25 @@ b, strong {
   left:-2px;
   right:-2px;
   bottom:-2px;
-  border-radius:10px;
-  padding:5px;
-  background:linear-gradient(129deg, rgba(0,41,251,1) 0%,rgba(111,21,108,1) 20%,rgba(0,96,27,1) 42%,rgba(253,124,0,1) 64%,rgba(247,255,22,1) 84%,rgba(255,22,22,1) 100%);;
-  -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+  border-radius:10px; 
+  padding:5px; 
+  background:linear-gradient(129deg, rgba(0,41,251,1) 0%,rgba(111,21,108,1) 20%,rgba(0,96,27,1) 42%,rgba(253,124,0,1) 64%,rgba(247,255,22,1) 84%,rgba(255,22,22,1) 100%);; 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out; 
+  mask-composite: exclude; 
 }
-/*.stream-randomizer::after {*/
-/*  content: '';position: absolute;*/
-/*  top: -40px;*/
-/*  left: -85px;*/
-/*  width: 969px;*/
-/*  height: 790px;*/
-/*  background: url(../images/bg-form.png) 0 0 no-repeat;*/
-/*  pointer-events: none;*/
+.stream-randomizer::after {
+  content: '';position: absolute;
+  top: -40px;
+  left: -85px;
+  width: 969px;
+  height: 790px;
+  background: url(../images/bg-form.png) 0 0 no-repeat;
+  pointer-events: none;
 
-/*}*/
+}
 .star {
   position: absolute;
   z-index: 10;
@@ -401,7 +401,7 @@ b, strong {
   color: #fcff15;
 }
 .stream-randomizer__head.superprize .prize {
-  background: linear-gradient(to bottom, #ff8432 0%,#fcff15 100%);
+    background: linear-gradient(to bottom, #ff8432 0%,#fcff15 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: scale 0.5s cubic-bezier(0.59, 0.29, 0, 1.2) 0.3s infinite;
@@ -487,13 +487,13 @@ b, strong {
 
 .perspective-on {
   -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;    /* Setting the perspective of the contents of the stage but not the stage itself*/
+     -moz-perspective: 1000px;
+          perspective: 1000px;    /* Setting the perspective of the contents of the stage but not the stage itself*/
 }
 .perspective-off {
   -webkit-perspective: 0;
-  -moz-perspective: 0;
-  perspective: 0;
+     -moz-perspective: 0;
+          perspective: 0;
 }
 
 #rotate {
@@ -542,7 +542,7 @@ b, strong {
 .ring {
   margin: 0;
   height: 80px;
-  width: 80px;
+  width: 90px;
   float: left;
   transform-style: preserve-3d;
   position: relative;
@@ -550,7 +550,7 @@ b, strong {
 }
 .slot {
   position: absolute;
-  width: 76px;
+  width: 90px;
   height: 80px;
   box-sizing: border-box;
   opacity: 0.9;
@@ -559,14 +559,14 @@ b, strong {
   border: solid 2px #000;
   transition: background .3s ease 0.8s;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .backface-on {
   -webkit-backface-visibility: visible;
-  -moz-backface-visibility: visible;
-  backface-visibility: visible;
+     -moz-backface-visibility: visible;
+          backface-visibility: visible;
 }
 
 .slot p {
@@ -626,48 +626,48 @@ label {
 /*.spin-11    { transform: rotateX(-4049deg); }*/
 /*=====*/
 @keyframes back-spin {
-  /*0%    { transform: rotateX(0deg); }*/
-  100%  { transform: rotateX(30deg); }
+    /*0%    { transform: rotateX(0deg); }*/
+    100%  { transform: rotateX(30deg); }
 }
 @keyframes spin-0 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3597deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3597deg); }
 }
 @keyframes spin-1 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3993deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3993deg); }
 }
 @keyframes spin-2 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3669deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3669deg); }
 }
 @keyframes spin-3 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3705deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3705deg); }
 }
 @keyframes spin-4 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3741deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3741deg); }
 }
 @keyframes spin-5 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3777deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3777deg); }
 }
 @keyframes spin-6 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-4173deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-4173deg); }
 }
 @keyframes spin-7 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3849deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3849deg); }
 }
 @keyframes spin-8 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-4245deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-4245deg); }
 }
 @keyframes spin-9 {
-  0%    { transform: rotateX(30deg); }
-  100%  { transform: rotateX(-3921deg); }
+    0%    { transform: rotateX(30deg); }
+    100%  { transform: rotateX(-3921deg); }
 }
 @media screen and (max-height: 1150px) {
   .stream-block__title {
@@ -767,7 +767,7 @@ label {
   .spinner-arrow-left {left: 20px;}
   .spinner-arrow-right {right: 20px;}
   .slot p {font-size: 26px;}
-  .stream-block__title {font-size: 26px;}
+    .stream-block__title {font-size: 26px;}
   .stream-userlist__head .stream-col {
     height: 34px;
     line-height: 34px;
@@ -777,7 +777,7 @@ label {
     line-height: 22px;
   }
   .stream-randomizer__head .prize {font-size: 46px;}
-  .stream-randomizer__head {
+    .stream-randomizer__head {
     font-size: 30px;
     line-height: 64px;
   }
