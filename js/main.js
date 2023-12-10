@@ -1,4 +1,4 @@
-const WINNERS_OF = 94;
+const WINNERS_OF = 75;
 const SLOTS_PER_REEL = 10;
 const MIN_SLOTS = '61016';
 const MAX_SLOTS = '92423';
