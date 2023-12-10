@@ -101,18 +101,18 @@ function generateWinner(id, prize, ticket, account) {
 
 function getColor(id) {
     var color;
-    if (id < 61) {
+    if (id < 41) {
         color = "turquoise-color";
     }
-    if (id > 60 && id < 81) {
+    if (id > 40 && id < 61) {
         color = "yellow-color";
     }
-    if (id > 80 && id < 93) {
-        color = "orange-color";
-    }
-    // if (id > 92) {
+    // if (id > 80 && id < 93) {
     //     color = "orange-color";
     // }
+    if (id > 60) {
+        color = "orange-color";
+    }
     return color;
 }
 
