@@ -44,7 +44,7 @@ function getRndInteger(min, max) {
 function spin(timer) {
     let rndInteger = getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS));
 
-    while (isNulled(rndInteger)) {
+    while (isNulled(rndInteger) || !issetTicket(rndInteger)) {
         console.log("-------Nulled------");
         rndInteger = getRndInteger(parseInt(MIN_SLOTS), parseInt(MAX_SLOTS));
     }
@@ -78,6 +78,15 @@ function spin(timer) {
 
 function isNulled(rndInteger) {
     for(let key in TICKETS_NULLED){
+        if (key == rndInteger) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function issetTicket(rndInteger) {
+    for(let key in TICKETS){
         if (key == rndInteger) {
             return true;
         }
@@ -135,6 +144,10 @@ let counterWinner = 0;
         counterWinner = listWinner.length;
         $('.stream-randomizer__head .counter').text(counterWinner);
         $('.stream-randomizer__head .prize').text("$" + winPrizes[counterWinner]);
+        // if (listWinner.length === WINNERS_OF) {
+        //     $('.stream-randomizer').addClass('superprize');
+        //     $('.stream-randomizer__head').addClass('superprize').html('Draw of Super Prize<span class="prize">$5000</span>')
+        // }
 
         for (let i = 0; i <  listWinner.length ; i++) {
             $('.stream-userlist__body').prepend(generateWinner(listWinner[i].id, listWinner[i].winnerPrize, listWinner[i].winnerTicket, listWinner[i].winnerAccount));
