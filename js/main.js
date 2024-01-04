@@ -1,7 +1,7 @@
 const WINNERS_OF = 75;
 const SLOTS_PER_REEL = 10;
 const MIN_SLOTS = '61016';
-const MAX_SLOTS = '92423';
+const MAX_SLOTS = '93931';
 const REEL_RADIUS = 123;
 
 let winNumber = [];
