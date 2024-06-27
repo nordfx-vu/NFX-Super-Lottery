@@ -1,11 +1,9 @@
-const confPrizes = {60: 250, 62: 1000, 72: 1800, 75: 5000};
+const confPrizes = {40: 250, 50: 500, 55: 750, 56: 1250};
 let winPrizes = {};
 
 for(let i = 0; i < Object.keys(confPrizes).length; i++) {
     createWinPrizeList(Object.keys(confPrizes)[i - 1], Object.keys(confPrizes)[i], Object.values(confPrizes)[i]);
 }
-
-// console.log(winPrizes);
 
 function createWinPrizeList (from, to, value) {
     from = from === undefined? 0 : parseInt(from);

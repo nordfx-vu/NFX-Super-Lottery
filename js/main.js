@@ -1,8 +1,12 @@
-const WINNERS_OF = 75;
 const SLOTS_PER_REEL = 10;
-const MIN_SLOTS = '61016';
-const MAX_SLOTS = '93931';
 const REEL_RADIUS = 123;
+
+const ticketsKeys = Object.keys(TICKETS);
+const winPrizeValues = Object.values(winPrizes);
+const MIN_SLOTS = ticketsKeys[0];
+const MAX_SLOTS = ticketsKeys[ticketsKeys.length - 1];
+const WINNERS_OF = winPrizeValues.length;
+const topPrizeAmounts = Object.values(confPrizes).reverse();
 
 let winNumber = [];
 
@@ -99,30 +103,14 @@ function generateSpin(id) {
 }
 
 function generateWinner(id, prize, ticket, account) {
-
-    return  `<div class="stream-winner win-${WINNERS_OF-id}">`+
+    const prizeTier = topPrizeAmounts.indexOf(prize) + 1;
+    const isFirstInTier = !!confPrizes[id];
+    return  `<div class="stream-winner win-${WINNERS_OF-id} prize-tier-${prizeTier} ${isFirstInTier && 'border-top'}">`+
         `<div class="stream-col">${id}</div>`+
-        `<div class="stream-col ` + getColor(id) + `">$ ${prize}</div>`+
-        `<div class="stream-col">${ticket}</div>`+
+        `<div class="stream-col stream-col-prize">$ ${prize}</div>`+
+        `<div class="stream-col stream-col-ticket">${ticket}</div>`+
         `<div class="stream-col">${account}</div>`+
         `</div>`;
-}
-
-function getColor(id) {
-    var color;
-    if (id < 61) {
-        color = "turquoise-color";
-    }
-    if (id > 60 && id < 81) {
-        color = "yellow-color";
-    }
-    if (id > 80 && id < 93) {
-        color = "orange-color";
-    }
-    // if (id > 92) {
-    //     color = "orange-color";
-    // }
-    return color;
 }
 
 function gettingWinnerAccount (id) {
@@ -152,6 +140,30 @@ let counterWinner = 0;
         for (let i = 0; i <  listWinner.length ; i++) {
             $('.stream-userlist__body').prepend(generateWinner(listWinner[i].id, listWinner[i].winnerPrize, listWinner[i].winnerTicket, listWinner[i].winnerAccount));
         }
+    }
+
+    /* Download nulled tickets to file */
+    if (localStorage.getItem('listWinner')) {
+        $(document).on('keydown', (event) => {
+            if (event.ctrlKey&&event.altKey&&event.key==='0') {
+                const nulledTickets = {...TICKETS_NULLED};
+                listWinner.forEach(ticket => {
+                    nulledTickets[ticket.winnerTicket] = ticket.winnerAccount;
+                });
+                const fileData = `const TICKETS_NULLED = ${JSON.stringify(nulledTickets)};`;
+                const blob = new Blob([fileData], { type: 'application/javascript' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'tickets_nulled.js';
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 0);
+            }
+        });
     }
 
     /* clear the localStorage*/
@@ -201,9 +213,9 @@ let counterWinner = 0;
                 window.localStorage.setItem('listWinner',JSON.stringify(listWinner));
                 $('.stream-userlist__body').prepend(generateWinner(counterWinner, winPrizes[counterWinner], winNumber.join(''),
                     gettingWinnerAccount(winNumber.join(''))));
-                    if (counterWinner === WINNERS_OF) {
-                        animateLoop();
-                    }
+                if (counterWinner === WINNERS_OF) {
+                    animateLoop();
+                }
             }, 4000);
             spin(2);
         }
