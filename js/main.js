@@ -2,10 +2,9 @@ const SLOTS_PER_REEL = 10;
 const REEL_RADIUS = 123;
 
 const ticketsKeys = Object.keys(TICKETS);
-const winPrizeValues = Object.values(winPrizes);
 const MIN_SLOTS = ticketsKeys[0];
 const MAX_SLOTS = ticketsKeys[ticketsKeys.length - 1];
-const WINNERS_OF = winPrizeValues.length;
+const WINNERS_OF = Object.values(winPrizes).length;
 const topPrizeAmounts = Object.values(confPrizes).reverse();
 
 let winNumber = [];
